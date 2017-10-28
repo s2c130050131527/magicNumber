@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Magic No </title>
+	<script type="text/javascript">
+		s="";c=1;
+		function ans(){
+			var a=parseInt(prompt("enter number"));
+			t=a-2;
+			s=s+a;
+			document.getElementById("p1").innerHTML="<h1>addition of your desired numbers is:<h1>2"+t+"<br>";
+			document.getElementById("d1").innerHTML=a;
+		}
+		function operation(){
+
+			var a=parseInt(prompt("Enter number"));
+			b=999-a;
+			s=s+"<br>"+a+"<br>"+b;
+			document.getElementById("d1").innerHTML=s;
+			c=c+1;
+			if(c>2){
+			//alert("in count");
+			f2();}
+			}
+
+		function f1(){
+		st=setInterval(operation,2000);
+		}
+
+		function f2(){
+		//alert("clear in f3");
+		clearInterval(st);	
+		document.getElementById("d3").innerHTML="<h1>Calculate your answer....<h1><br>";
+		}
+	</script>
+</head>
+<body onload="ans()">
+<p id="p1">
+</p>
+<p id="p2">
+<div id ="d2">
+<button onclick="f1()">Start</button>
+</div>
+</p>
+<p id ="p3">
+<!--<button onclick="f2()">Clear</button>-->
+</p>
+<div id="d1"></div>
+<div id="d3"></div>
+
+</body>
+</html>
